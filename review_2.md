@@ -64,10 +64,10 @@ $now = new DateTime();
 $prev = new DateTime('2000-1-1');
 echo $prev->diff($now)->format('%a')
 ```
-- ・使用されているのがDateTimediffというのは二つのオブジェクトの差分を返すものなので
-　返される値がどういった文字列で返されているのか分からない状態です。
-　・datetime::diffで検索しdate::diffがエイリアス(仮の名前)でdatetime:diffのページに飛び、
-　出力例で%aが使われており、総日数が取得されるのがわかります。
+- メソッドチェーンは「インスタンス名(オブジェクト型)->メソッド名(プロパティ名)」の書き方になるので
+phpの公式ページの検索からDatetimeと検索し、DateTimeクラスのどのようなプロパティ、メソッド構成されてるか調べます。
+メソッドの欄にpublic format(string $format): stringと記載があるので、最後の単語がそのメソッドの返り値なので
+formatメソッドの返り値はstring型と分かります。
 
 
 　
